@@ -50,3 +50,48 @@ class Tienda {
     }
 }
 
+public class VentasDistribucion {
+    public static void main(String[] args) {
+        Producto[] productos = {
+            new Producto("Camisa", 25.99, 20),      ///cervezas
+            new Producto("Pantalón", 39.99, 15),    ///cervezas
+            new Producto("Zapatos", 49.99, 10)      ///cervezas
+        };
+
+        Tienda tienda = new Tienda(productos);
+        Scanner scanner = new Scanner(System.in);
+
+        int opcion;
+        do {
+            System.out.println("1. Mostrar inventario");
+            System.out.println("2. Vender producto");
+            System.out.println("3. Salir");
+            System.out.print("Ingrese su opción: ");
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    tienda.mostrarInventario();
+                    break;
+                case 2:
+                    System.out.print("Ingrese el índice del producto que desea vender: ");
+                    int indiceProducto = scanner.nextInt();
+                    System.out.print("Ingrese la cantidad que desea vender: ");
+                    int cantidadVenta = scanner.nextInt();
+                    if (indiceProducto >= 0 && indiceProducto < productos.length) {
+                        tienda.venderProducto(productos[indiceProducto], cantidadVenta);
+                    } else {
+                        System.out.println("Índice de producto no válido.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción no válida.");
+            }
+        } while (opcion != 3);
+
+        scanner.close();
+    }
+}
