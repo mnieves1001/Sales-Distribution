@@ -1,0 +1,27 @@
+class Producto {
+    String nombre;
+    double precio;
+    int cantidadDisponible;
+
+    Producto(String nombre, double precio, int cantidadDisponible) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidadDisponible = cantidadDisponible;
+    }
+
+    void mostrarDetalles() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Cantidad disponible: " + cantidadDisponible);
+    }
+
+    boolean vender(int cantidad) {
+        if (cantidad <= cantidadDisponible) {
+            cantidadDisponible -= cantidad;
+            return true;
+        } else {
+            System.out.println("No hay suficiente stock disponible.");
+            return false;
+        }
+    }
+}
