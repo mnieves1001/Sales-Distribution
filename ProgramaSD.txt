@@ -53,9 +53,9 @@ class Tienda {
 public class VentasDistribucion {
     public static void main(String[] args) {
         Producto[] productos = {
-            new Producto("Camisa", 25.99, 20),      ///cervezas
-            new Producto("Pantalón", 39.99, 15),    ///cervezas
-            new Producto("Zapatos", 49.99, 10)      ///cervezas
+            new Producto("Poker", 25.99, 20),      ///cervezas
+            new Producto("Club Colombia", 39.99, 15),    ///cervezas
+            new Producto("Costeña", 49.99, 10)      ///cervezas
         };
 
         Tienda tienda = new Tienda(productos);
