@@ -77,7 +77,7 @@ class Tienda {
 
     void mostrarVentas() {
         if (ventas.isEmpty()) {
-            System.out.println("No se han realizado ventas.");
+            System.out.println("No se han realizado ventas. ");
         } else {
             System.out.println("Ventas realizadas:");
             for (int i = 0; i < ventas.size(); i++) {
