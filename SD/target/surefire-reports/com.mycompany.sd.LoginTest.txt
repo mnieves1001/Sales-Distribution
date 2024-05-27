@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.sd.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.069 s <<< FAILURE! - in com.mycompany.sd.LoginTest
+testAuthenticateValidUser  Time elapsed: 0.05 s  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at com.mycompany.sd.LoginTest.testAuthenticateValidUser(LoginTest.java:42)
+Caused by: java.lang.RuntimeException: Uncompilable code - method authenticate(java.lang.String,java.lang.String) is already defined in class com.mycompany.sd.Login
+	at com.mycompany.sd.LoginTest.testAuthenticateValidUser(LoginTest.java:42)
+
