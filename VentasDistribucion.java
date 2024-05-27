@@ -125,6 +125,7 @@ class Tienda {
             System.out.println("Índice de cliente no válido.");
         }
     }
+    //Hasta este punto se lleva la clase de gestion de clientes.
 }
 
 public class VentasDistribucion {
@@ -211,4 +212,5 @@ public class VentasDistribucion {
 
         scanner.close();
     }
-}
+
+    //Hasta este punto se lleva la clase de gestion de ventas
